@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <title>ReciPIE | HomePage</title>
+        <title>ReciPIE | Recipes</title>
 
         <script src="main.js"></script>
         <script>
         </script>
         <style>
-            nav{
-                margin-top: 20vh;
-            }
         </style>
     </head>
-    <body>
-        <main>
-            <header>
-                <h1>Welcome to ReciPIE!</h1>
-            </header>
-            <a href="settings.html"></a><i id="settings"></i></a>
-            <nav>
-                <a href="fridge.html" class="buttons buttons-main-nav">Fridge</a>
-                <a href="recipes.html" class="buttons buttons-main-nav">Recipes</a>
-                <a href="ideas.html" class="buttons buttons-main-nav">Meal ideas</a>
-                <a href="list.html" class="buttons buttons-main-nav">Shopping list</a>
-            </nav>
+    <body onload="inizialization()">
+        <nav class="main-nav-tel"></nav>
+        <header class="main-head"></header>
+
+        <main onload="inizial_recipes()">
+            <a href="add_recipe.html">+<i></i></a>
+
+            <section id="list-of-recipes"> <!--adding from JS-->
+                <div class="elem-recipe">
+                    <p class="name-rec" onclick="show_rec(name)">Name</p>
+                    <section class="icons-recipe">
+                        <i onclick="edit_rec(name)"></i>
+                        <i onclick="del_rec(name)"></i>
+                    </section>
+                </div>
+            </section>
+
         </main>
     </body>
 </html>
